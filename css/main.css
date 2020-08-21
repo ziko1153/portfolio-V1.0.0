@@ -40,6 +40,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    
 
 }
 img {
@@ -312,25 +313,33 @@ color:#F0D91D;
 
     max-width: 90%;
     margin: 3rem auto;
-    padding: 1rem;
     background-color: #fff;
     box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2) ;
-    display: flex;
-    align-items: center;
     border-radius: .8rem;
-    flex-direction: column;
   
+  }
+
+  .project__menu{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
   }
 
   .project__title {
       font-size: var(--fs-h2);
       font-weight: 500;
+      padding: 1em;
   }
 
+/* Card Project  */
 
-  .card-container {
-    width: 300px;
-    height: 600px;
+.card-container {
+    width: 250px;
+    height: 500px;
+    /* margin: .8rem; */
+    margin: .8rem 0px;
+    
 }
 .card {
     width: 100%;
@@ -347,9 +356,10 @@ color:#F0D91D;
 }
 
 .card-front {
+    position: absolute;
     display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 320px 210px 80px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: 280px 120px 100px;
     grid-template-areas: "image" "text" "stats";
     font-family: 'Mulish', sans-serif;
     border-radius: 18px;
@@ -364,15 +374,30 @@ color:#F0D91D;
 
 .card-image {
     grid-area: image;
-    background: url('img/ziko.jpg');
+    background: url('../img/ziko.jpg');
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
+    position: relative;
+}
+
+.card-image .caption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+.card-image .caption h2 {
+    color: white;
+    padding: .75rem;
+    font-size: var(--fs-h2)
 }
 
 .card-text {
     grid-area: text;
-    margin: 20px;
+    margin: 0px .5rem 1.5rem 0.5rem;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .7);
 }
 .card-text h1 {
     margin-top: 0px;
@@ -389,6 +414,8 @@ color:#F0D91D;
     justify-content: center;
     color: black;
     border-top: 2px solid #e8dddb4d;
+    margin-top: 2rem;
+    font-size: .8rem;
 }
 
 .card-stats .stat {
@@ -399,16 +426,17 @@ color:#F0D91D;
 
 .stat + .stat {
 
-    border-left: 2px solid #e8dddb4d;
+    /* border-left: 2px solid #e8dddb4d; */
 
 }
 
 .card-back {
+    position: absolute;
     display: grid;
-    grid-template-columns: 300px;
-    grid-template-rows: 100px 420px 80px;
+    grid-template-columns: 250px;
+    grid-template-rows: 100px 320px 80px;
     grid-template-areas: "title" "description" "action";
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
     font-family: 'Mulish', sans-serif;
     border-radius: 18px;
     background: white;
@@ -425,17 +453,17 @@ color:#F0D91D;
 .card__back--title::after {
     content: '';
     display: block;
-    margin-top: 8px;
+    margin-top: 3px;
     border-bottom: 2px solid salmon;
 }
 
 
 .card__back--description {
     grid-area: description;
-    margin:0 auto;
     padding: 5px;
     line-height: 1.4em;
-    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, .7);
     text-align: left;
 }
 
@@ -455,11 +483,17 @@ color:#F0D91D;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
 }
 
+.stat .type {
+    width: 30px;
+}
+
 .card__back--action {
     grid-area: action;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    font-size: .7rem;
+    
 }
 
 .card__back--action a i {
@@ -474,8 +508,7 @@ color:#F0D91D;
     text-transform: uppercase;
     font-weight: 900;
     letter-spacing: 2px;
-    color: #5a84a2;
-    font-size: 0.6em;
+    color: var(--clr-accent);
     border-radius: 40px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
                 -2px -2px 12px rgba(255, 255, 255, 0.5),
@@ -498,10 +531,25 @@ color:#F0D91D;
 
 
 
+
+
   @media (min-width: 900px) {
 
     .project {
         max-width: 70%;
+    }
+
+    .project__menu {
+        justify-content: space-around;
+        flex-direction: row;
+        
+    }
+    .card-container {
+        margin: 5rem .8rem;
+    }
+    .card-stats { 
+
+        font-size: 1rem;
     }
   }
 
