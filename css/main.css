@@ -80,6 +80,10 @@ header {
     color: #75AC64;
 }
 
+.php {
+    color: #4D598F;
+}
+
 .js {
 
 color:#F0D91D;
@@ -94,6 +98,10 @@ color:#F0D91D;
 
 .mysql {
     margin-bottom: 15px;
+}
+
+.jquery {
+    margin-bottom: 4px;
 }
 
 .intro__hi {
@@ -172,6 +180,7 @@ color:#F0D91D;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
+    display: inline-block;
 }
 
 .btn {
@@ -408,7 +417,25 @@ color:#F0D91D;
 }
 
 #stinson {
-    background: url('../img/project/stinson.jpg');
+    background: url('../img/project/stinson.PNG');
+    background-size: cover;
+    position: relative;
+}
+
+#nebula {
+    background: url('../img/project/nebula.png');
+    background-size: cover;
+    position: relative;
+}
+
+#madeena {
+    background: url('../img/project/madeena.PNG');
+    background-size: cover;
+    position: relative;
+}
+
+#arcar {
+    background: url('../img/project/arcar.PNG');
     background-size: cover;
     position: relative;
 }
@@ -489,6 +516,7 @@ color:#F0D91D;
     grid-area: title;
     align-self: center;
     justify-self: center;
+    font-weight: 500;
 }
 
 .card__back--title::after {
@@ -517,7 +545,7 @@ color:#F0D91D;
 }
 .card__back--description ul li {
     list-style: none;
-    padding: 10px;
+    padding: 8px;
     margin: 0px;
     width: 100%;
     background: #fff;
