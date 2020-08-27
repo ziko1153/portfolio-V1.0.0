@@ -556,6 +556,12 @@ color:#F0D91D;
     position: relative;
 }
 
+#jsfun {
+    background: url('../img/project/funjs.png');
+    background-size: cover;
+    position: relative;
+}
+
 #nebula {
     background: url('../img/project/nebula.png');
     background-size: cover;
