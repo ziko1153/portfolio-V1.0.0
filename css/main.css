@@ -69,6 +69,10 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 1em;
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2) ;
 }
 .logo {
     max-width: 80px;
@@ -114,11 +118,11 @@ header {
     padding: 0;
     background: transparent;
     outline: none;
-    border: none;
+    border:none;
     cursor: pointer;
     position: absolute;
     right: 3em;
-    top: 4em;
+    top: 4.5em;
     z-index: 1000;
 }
 
@@ -156,7 +160,7 @@ header {
     background: var(--clr-accent);
     width: 6em;
     height: 2px;
-
+    border-radius: 1em;
     transition: transform 250ms ease-in-out;
 }
 
@@ -179,6 +183,10 @@ header {
     }
     .logo {
         max-width: 150px;
+    }
+
+    header {
+        box-shadow:none;
     }
 
 .hamburger,
