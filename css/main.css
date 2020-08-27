@@ -5,6 +5,9 @@
     outline: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 :root {
     --ff-primary: 'Mulish', sans-serif;
@@ -60,10 +63,131 @@ h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
 
+/* Header Section */
+
 header {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+.logo {
+    max-width: 80px;
 }
 
+.nav {
+    position: fixed;
+    background: var(--clr-dark);
+    width: 100%;
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav__link {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 3em;
+    top: 4em;
+    z-index: 1000;
+}
+
+.nav-open .nav {
+    transform:  translate(0);
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+}
+
+.nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+    opacity: 0;
+}
+
+
+
+.hamburger {
+  
+
+    display: block;
+    position: relative;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-accent);
+    width: 6em;
+    height: 2px;
+
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
+
+
+@media (min-width: 900px) {
+    .nav-toggle {
+        top:3em;
+        right: 1em;
+    }
+    .logo {
+        max-width: 150px;
+    }
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 2em;
+    height: 2px;
+}
+ }
 
 /* Color Select in Font Icon */
 .react {
@@ -111,6 +235,7 @@ color:#F0D91D;
 
   max-width: 90%;
   margin: 0 auto;
+  margin-top: 120px;
   padding: 1rem;
   background-color: #fff;
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2) ;
@@ -303,6 +428,7 @@ color:#F0D91D;
 @media (min-width: 900px) {
     .intro {
         max-width: 70%;
+        margin-top: 0;
         flex-direction: row;
         padding: 5rem;
     }
