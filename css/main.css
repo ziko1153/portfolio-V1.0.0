@@ -68,11 +68,11 @@ h3 { font-size: var(--fs-h3) }
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1em 1.5em 0 1.5em;
     z-index: 100;
     position: sticky;
     top: 0px;
-    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2) ;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.1);
 }
 .logo {
     max-width: 80px;
@@ -186,7 +186,7 @@ header {
     }
 
     header {
-        box-shadow:none;
+       
     }
 
 .hamburger,
@@ -325,6 +325,7 @@ color:#F0D91D;
     letter-spacing: 2px;
     font-size: 1.2rem;
     margin: 2px;
+    cursor: pointer;
     color: var(--clr-accent);
     border-radius: 40px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
@@ -436,7 +437,7 @@ color:#F0D91D;
 @media (min-width: 900px) {
     .intro {
         max-width: 70%;
-        margin-top: 0;
+        margin-top: 30px;
         flex-direction: row;
         padding: 5rem;
     }
@@ -1079,6 +1080,29 @@ footer p {
         max-width: 70%;
     }
 }
+
+.error-message {
+    margin: 10px;
+    font-size: 12px;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    padding: 5px 20px;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+
+
+.success-message {
+    margin: 10px;
+    font-size: 12px;
+    background: #00b100;
+    color: var(--clr-light);
+    padding: 5px 20px;
+    border-radius: 1rem;
+    font-weight: 700;
+}
+
+
 
 
 

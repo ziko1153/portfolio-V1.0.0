@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/f6f7689b27.js" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
     <script  src="js/app.js" type="text/javascript" defer></script>
 
 </head>
@@ -53,7 +54,7 @@
                         
                              <div class="contact">
                                     <ul>
-                                        <li><a href="mailto:hello@ziko.dev"><i class="fas fa-paper-plane"></i></a></li>
+                                        <li><a href="mailto:hey@ziko.dev"><i class="fas fa-paper-plane"></i></a></li>
                                         <li><a href="https://www.linkedin.com/in/tahmid-ziko/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                                         <li><a target="_blank" href="https://github.com/ziko1153"><i style="color:black" class="fab fa-github"></i></a></li>
                                         <li><a target="_blank" href="https://www.upwork.com/o/profiles/users/~01ef83941b227ec801/"><img src="img/up.png"/></li>
@@ -660,26 +661,31 @@
                     <div class="contacts-form">
                       <div class="input-fields">
                           <div class="input-data">
-                            <input type="text" class="input" placeholder="Name">
+                            <input id="name" type="text" class="input" placeholder="Name">
                             <div class="underline"></div>
                           </div>
                     
                           <div class="input-data">
-                            <input type="email" class="input" placeholder="Email Address">
+                            <input id="email" type="email" class="input" placeholder="Email Address">
                             <div class="underline"></div>
                           </div>
                       </div>
                       <div class="msg">
                         <div class="input-data">
-                         <textarea placeholder="Message"></textarea>
+                         <textarea id="messageText" placeholder="Message"></textarea>
                            <div class="underline"></div>
                          
                       
                         </div>
                         
                       </div>
+                      <div id="addMessage">
+                       
+                       
+                      </div>
+                     
                       <div class="contacts-btn">
-                          <div class="btn"><i class="fas fa-paper-plane"></i>send</div>
+                          <div class="btn" id="sendBtn"><i class="fas fa-paper-plane"></i>send</div>
 
                       </div>
                     </div>
