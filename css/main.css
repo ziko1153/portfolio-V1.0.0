@@ -551,19 +551,25 @@ color:#F0D91D;
 }
 
 #stinson {
-    background: url('../img/project/stinson.PNG');
+    background: url('../img/project/stinson.jpg');
     background-size: cover;
     position: relative;
 }
 
 #jsfun {
-    background: url('../img/project/funjs.png');
+    background: url('../img/project/funjs.jpg');
     background-size: cover;
     position: relative;
 }
 
 #phpfun {
-    background: url('../img/project/sms.png');
+    background: url('../img/project/sms.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+#vision {
+    background: url('../img/project/vision.jpg');
     background-size: cover;
     position: relative;
 }
@@ -574,13 +580,13 @@ color:#F0D91D;
 }
 
 #madeena {
-    background: url('../img/project/madeena.PNG');
+    background: url('../img/project/madeena.jpg');
     background-size: cover;
     position: relative;
 }
 
 #arcar {
-    background: url('../img/project/arcar.PNG');
+    background: url('../img/project/arcar.jpg');
     background-size: cover;
     position: relative;
 }
@@ -759,7 +765,7 @@ color:#F0D91D;
         
     }
     .card-container {
-        margin: 5rem .8rem;
+        margin: 2rem .8rem;
     }
     .card-stats { 
 
