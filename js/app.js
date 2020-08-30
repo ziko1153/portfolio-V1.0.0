@@ -32,7 +32,6 @@ navLinks.forEach(link => {
 let addMessageContainer = document.getElementById("addMessage");
 
 let successMessage = data => {
-  sendButton.innerHTML = `<i class="fas fa-paper-plane"></i> Send`;
   addMessageContainer.innerHTML = "";
   let messageDiv = document.createElement("div");
   messageDiv.className = "success-message";
@@ -53,8 +52,6 @@ let showErrorMessage = data => {
     messageDiv.innerText = error;
     addMessageContainer.appendChild(messageDiv);
   });
-
-  sendButton.innerHTML = `<i class="fas fa-paper-plane"></i> Send`;
 };
 
 let disappearMessage = () => {
@@ -64,10 +61,9 @@ let disappearMessage = () => {
 };
 
 let sendButton = document.getElementById("sendBtn");
-
 sendButton.addEventListener("click", e => {
-  addMessageContainer.innerHTML = "";
-  sendButton.innerHTML = `<i class="fas fa-paper-plane"></i> Sending...`;
+  buttonDisable(true);
+
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let messageText = document.getElementById("messageText").value;
@@ -84,6 +80,7 @@ sendButton.addEventListener("click", e => {
     data,
   })
     .then(response => {
+      buttonDisable(false);
       console.log(response);
       if (response.data.errors) {
         showErrorMessage(response.data.errors);
@@ -95,6 +92,24 @@ sendButton.addEventListener("click", e => {
       }
     })
     .catch(err => {
+      buttonDisable(false);
       console.log(err);
     });
 });
+
+let buttonDisable = disble => {
+  if (disble) {
+    sendButton.disabled = true;
+    sendButton.style.backgroundColor = "#1C2833";
+    sendButton.style.color = "#fff";
+    sendButton.style.cursor = "not-allowed";
+    addMessageContainer.innerHTML = "";
+    sendButton.innerHTML = `<i class="fas fa-paper-plane"></i> Sending...`;
+  } else {
+    sendButton.disabled = false;
+    sendButton.style.backgroundColor = "transparent";
+    sendButton.style.color = "#FF5733";
+    sendButton.style.cursor = "pointer";
+    sendButton.innerHTML = `<i class="fas fa-paper-plane"></i> Send`;
+  }
+};

@@ -316,6 +316,7 @@ color:#F0D91D;
     display: inline-block;
 }
 
+
 .btn {
     position: relative;
     display: inline-block;
@@ -326,6 +327,9 @@ color:#F0D91D;
     font-size: 1.2rem;
     margin: 2px;
     cursor: pointer;
+    outline: none;
+    border: none;
+    background: transparent;
     color: var(--clr-accent);
     border-radius: 40px;
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
