@@ -29,7 +29,7 @@ html {
 
 @media (min-width: 900px) {
     :root {
-        --fs-h1: 3.0rem;
+        --fs-h1: 2.6rem;
         --fs-h2: 2rem;
         --fs-h3: 1.5rem;
         --fs-h4: 1.1rem;
@@ -170,6 +170,7 @@ header {
     position: absolute;
     left: 0;
     right: 0;
+    cursor: pointer;
 }
 
 .hamburger::before { top: 6px; }
@@ -193,7 +194,7 @@ header {
 .hamburger::before,
 .hamburger::after {
     width: 2em;
-    height: 2px;
+    height: 3px;
 }
  }
 
@@ -555,6 +556,17 @@ color:#F0D91D;
   
 }
 
+#beautiv {
+    background: url('../img/project/beautiv.png');
+    background-size: cover;
+    position: relative;
+}
+
+#quiz {
+    background: url('../img/project/quiz.png');
+    background-size: cover;
+    position: relative;
+}
 #stinson {
     background: url('../img/project/stinson.jpg');
     background-size: cover;
@@ -765,7 +777,7 @@ color:#F0D91D;
     }
 
     .project__menu {
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: row;
         
     }
@@ -913,7 +925,7 @@ color:#F0D91D;
 
 
     .timeline-date { 
-        font-size: .9rem;
+        font-size: .7rem;
         display: inline-table;
         margin: -4px 10px 0 2rem;
         border-right: 4px solid var(--clr-accent);
