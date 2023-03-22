@@ -870,7 +870,8 @@ color:#F0D91D;
     padding-right: 3rem;
     border-right: 4px solid var(--clr-accent);
     background-color: rgba(0, 0, 0, .7);
-    color:white
+    color:white;
+    height:5%;
 
 }
 .timeline-date span {
